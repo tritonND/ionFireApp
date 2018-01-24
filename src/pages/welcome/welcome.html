@@ -26,7 +26,38 @@
         <ion-slide style="background-color:rgb(83, 32, 151)">
             <i primary class="fa fa-4x fa-lg fa-cogs"></i>
         <h2 class="animated lightSpeedIn">You need internet to submit your forms </h2>
-        </ion-slide>   
+        </ion-slide> 
+        
+        <ion-slide style="background-color:rgb(83, 32, 151)">
+            <i primary class="fa fa-4x fa-lg fa-cogs"></i>
+            <h4 class="animated lightSpeedIn">Enter your login credentials </h4>
+      
+         <ion-card>
+           <ion-card-content> 
+         
+          <form>
+            <div align="center" class="noscrol">
+                <ion-list class="fcenter">
+        
+                    <ion-item class="tlabel">
+                        <ion-label  floating>Username</ion-label>
+                        <ion-input required type="text" name="username" [(ngModel)]="data.username"></ion-input>
+                    </ion-item>
+        
+                    <ion-item class="tlabel">
+                        <ion-label floating>Password</ion-label>
+                        <ion-input required type="password" name="password" [(ngModel)]="data.password"></ion-input>
+                    </ion-item>
+        
+                </ion-list>
+        
+                <button ion-button (click)="signIn()">SignUp</button>
+            </div>
+        </form>
+      </ion-card-content>
+         </ion-card>
+      </ion-slide> 
+
   </ion-slides>
 
 
