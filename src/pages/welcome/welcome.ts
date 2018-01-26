@@ -46,7 +46,14 @@ export class WelcomePage {
 
           this.navCtrl.setRoot(FormsPage);
           })
-    .catch( Error => {console.error(Error)})      
+    .catch( Error => {console.error(Error);
+      console.error(Error.message);
+      let loader = this.loadingCtrl.create({
+        content: Error.message,
+        duration: 4000
+      });
+      loader.present();
+    })      
   }
 
 

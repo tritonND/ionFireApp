@@ -13,8 +13,11 @@ import { LoginPage } from '../pages/login/login';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
-import { IonfireProvider } from '../providers/ionfire/ionfire';
+// import { IonfireProvider } from '../providers/ionfire/ionfire';
 import { Formdata } from '../models/data.models';
+import { Geolocation } from '@ionic-native/geolocation';
+import { Camera } from '@ionic-native/camera';
+import { IonfireProvider } from '../providers/ionfire/ionfire';
  
 
 
@@ -48,9 +51,10 @@ export const firebaseConfig = {
   ],
   providers: [
     StatusBar,
-    SplashScreen,
+    SplashScreen, Geolocation, Camera, AngularFireDatabase,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    IonfireProvider
+    IonfireProvider,
+    
   ]
 })
 export class AppModule {}

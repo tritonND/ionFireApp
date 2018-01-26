@@ -5,6 +5,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { WelcomePage } from '../pages/welcome/welcome';
+// import { IonfireProvider } from '../providers/ionfire/ionfire';
+
 @Component({
   templateUrl: 'app.html'
 })

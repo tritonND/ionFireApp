@@ -8,47 +8,80 @@
 
 <ion-content padding> -->
   <ion-slides pager>
-       <ion-slide>
-           <h5>Section One</h5>
+       <ion-slide style="background-color:aliceblue">
+           <h3>Section One</h3>
               
         <!-- <button color="mycolor2" (click)="viewsPage()" block ion-button>Back</button> -->
-        <div align="center" class="noscrol">
+       
+       <div align="center" class="noscrol">
             <ion-list class="fcenter">
     
                 <ion-item class="tlabel">
-                    <ion-label  floating>Username</ion-label>
+                    <ion-label  floating>Firstname</ion-label>
                     <ion-input required type="text" name="username" [(ngModel)]="item.firstname"></ion-input>
                 </ion-item>
-    
+
                 <ion-item class="tlabel">
-                    <ion-label floating>Password</ion-label>
-                    <ion-input required type="password" name="password" [(ngModel)]="item.password"></ion-input>
+                    <ion-label  floating>Lastname</ion-label>
+                    <ion-input required type="text" name="lastname" [(ngModel)]="item.lastname"></ion-input>
                 </ion-item>
     
                 <ion-item class="tlabel">
                     <ion-label floating>Phone</ion-label>
-                    <ion-input required type="text" name="password" [(ngModel)]="item.phone"></ion-input>
+                    <ion-input required type="tel" name="phone" [(ngModel)]="item.phone"></ion-input>
                 </ion-item>
     
                 <ion-item class="tlabel">
                     <ion-label floating>Address</ion-label>
-                    <ion-input required type="text" name="password" [(ngModel)]="item.address"></ion-input>
+                    <ion-input required type="text" name="address" [(ngModel)]="item.address"></ion-input>
                 </ion-item>
     
-            </ion-list>
+            </ion-list> 
+
+
             <!-- {{item | json}}   -->
     
-            <button (click)="setProfile(item)" ion-button> Set Profile</button>
+            <!-- For the button  -->
+          
         </div>
        </ion-slide>
     
-       <ion-slide>
+       <ion-slide style="background-color:aliceblue">
           <h5>Section Two</h5>
+          <div align="center" class="noscrol">
+                <ion-list class="fcenter">
+        
+                    <ion-item>
+                      <ion-label floating>Gender</ion-label>
+                      <ion-select [(ngModel)]="item.gender">
+                      <ion-option value="female">Female</ion-option>
+                      <ion-option value="male">Male</ion-option>
+                      </ion-select>
+                    </ion-item>
+
+                    <ion-item>
+                            <ion-label floating>State Of Origin</ion-label>
+                            <ion-select [(ngModel)]="item.state">
+                            <ion-option value="abia">Abia</ion-option>
+                            <ion-option value="adamawa">Adamawa</ion-option>
+                            <ion-option value="kano">Kano</ion-option>
+                            <ion-option value="lagos">Lagos</ion-option>
+                            <ion-option value="kogi">Kogi</ion-option>
+                            <ion-option value="delta">Delta</ion-option>
+                            </ion-select>
+                          </ion-item>
+                </ion-list> 
+            </div>
        </ion-slide>
 
-       <ion-slide>
+       <ion-slide style="background-color:aliceblue">
           <h5>Section Three</h5>
 
+          <ion-item class="tlabel">
+                <ion-label floating>Email</ion-label>
+                <ion-input required type="email" name="address" [(ngModel)]="item.email"></ion-input>
+            </ion-item>
+          <button (click)="setProfile()" ion-button> Set Profile</button>
        </ion-slide>
   </ion-slides>
 <!-- 
