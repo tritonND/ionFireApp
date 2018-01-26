@@ -13,6 +13,9 @@ import { LoginPage } from '../pages/login/login';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
+import { IonfireProvider } from '../providers/ionfire/ionfire';
+import { Formdata } from '../models/data.models';
+ 
 
 
 export const firebaseConfig = {
@@ -46,7 +49,8 @@ export const firebaseConfig = {
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    IonfireProvider
   ]
 })
 export class AppModule {}

@@ -1,5 +1,11 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Platform, LoadingController } from 'ionic-angular';
+import { Geolocation, GeolocationOptions, Geoposition  } from '@ionic-native/geolocation';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { Camera, CameraOptions } from '@ionic-native/camera';
+
 
 /**
  * Generated class for the FormsPage page.
@@ -15,7 +21,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class FormsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+  private goe : Geolocation, ) {
   }
 
   ionViewDidLoad() {

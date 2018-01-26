@@ -1,18 +1,55 @@
-<!--
-  Generated template for the FormsPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>forms</ion-title>
+ 
+<!-- <ion-header>
+  <ion-navbar color="mycolor1">
+    <ion-title>Fill Details</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding> -->
+  <ion-slides pager>
+       <ion-slide>
+           <h5>Section One</h5>
+              
+        <!-- <button color="mycolor2" (click)="viewsPage()" block ion-button>Back</button> -->
+        <div align="center" class="noscrol">
+            <ion-list class="fcenter">
+    
+                <ion-item class="tlabel">
+                    <ion-label  floating>Username</ion-label>
+                    <ion-input required type="text" name="username" [(ngModel)]="item.firstname"></ion-input>
+                </ion-item>
+    
+                <ion-item class="tlabel">
+                    <ion-label floating>Password</ion-label>
+                    <ion-input required type="password" name="password" [(ngModel)]="item.password"></ion-input>
+                </ion-item>
+    
+                <ion-item class="tlabel">
+                    <ion-label floating>Phone</ion-label>
+                    <ion-input required type="text" name="password" [(ngModel)]="item.phone"></ion-input>
+                </ion-item>
+    
+                <ion-item class="tlabel">
+                    <ion-label floating>Address</ion-label>
+                    <ion-input required type="text" name="password" [(ngModel)]="item.address"></ion-input>
+                </ion-item>
+    
+            </ion-list>
+            <!-- {{item | json}}   -->
+    
+            <button (click)="setProfile(item)" ion-button> Set Profile</button>
+        </div>
+       </ion-slide>
+    
+       <ion-slide>
+          <h5>Section Two</h5>
+       </ion-slide>
 
-</ion-content>
+       <ion-slide>
+          <h5>Section Three</h5>
+
+       </ion-slide>
+  </ion-slides>
+<!-- 
+</ion-content> -->
