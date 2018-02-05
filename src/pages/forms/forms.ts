@@ -5,6 +5,8 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { Camera, CameraOptions } from '@ionic-native/camera';
+import { HomePage } from '../home/home';
+
  
 
 /**
@@ -23,7 +25,7 @@ export class FormsPage {
   item : any = {};
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 
-    private goe : Geolocation, private db: AngularFireDatabase ) 
+    private goe : Geolocation, private db: AngularFireDatabase, private loadingCtrl : LoadingController ) 
     {
     this.item.state = "";
     this.item.email = "";
@@ -46,6 +48,12 @@ export class FormsPage {
     // this.db.list('users').push(this.item)
     this.profileListRef.push(this.item)
     .then( (data)=> {
+      let loader = this.loadingCtrl.create({
+        content: "Succesful...",
+        duration: 4000
+      });
+      loader.present();
+      this.navCtrl.setRoot(HomePage);
       console.log('successful');
       console.log(data.key);
     },

@@ -18,6 +18,11 @@ import { Formdata } from '../models/data.models';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Camera } from '@ionic-native/camera';
 import { IonfireProvider } from '../providers/ionfire/ionfire';
+
+import { LstoragesPage } from '../pages/lstorages/lstorages';
+import { IonicStorageModule, Storage } from '@ionic/storage';
+import { NativeStorage } from '@ionic-native/native-storage';
+
  
 
 
@@ -35,25 +40,26 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     MyApp,
-    HomePage, WelcomePage, FormsPage, LoginPage
+    HomePage, WelcomePage, FormsPage, LoginPage, LstoragesPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
+    IonicStorageModule.forRoot(),
     AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage, WelcomePage, FormsPage, LoginPage
+    HomePage, WelcomePage, FormsPage, LoginPage, LstoragesPage
   ],
   providers: [
     StatusBar,
     SplashScreen, Geolocation, Camera, AngularFireDatabase,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    IonfireProvider,
+    IonfireProvider, NativeStorage
     
   ]
 })

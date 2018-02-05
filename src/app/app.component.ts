@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { WelcomePage } from '../pages/welcome/welcome';
+import { LstoragesPage } from '../pages/lstorages/lstorages';
 // import { IonfireProvider } from '../providers/ionfire/ionfire';
 
 @Component({
@@ -12,7 +13,8 @@ import { WelcomePage } from '../pages/welcome/welcome';
 })
 export class MyApp {
   // rootPage:any = HomePage;
-  rootPage:any = WelcomePage;
+  // rootPage:any = WelcomePage;
+  rootPage:any = LstoragesPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
