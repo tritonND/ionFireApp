@@ -64,6 +64,7 @@
            </ion-list> 
        </div>
   </ion-slide>
+  
 
   <ion-slide style="background-color:aliceblue">
      <h5>Section Three</h5>
@@ -72,6 +73,37 @@
            <ion-label floating>Email</ion-label>
            <ion-input required type="email" name="address" [(ngModel)]="item.email"></ion-input>
        </ion-item>
-     <button (click)="setProfile()" ion-button> Set Profile</button>
+     <!-- <button (click)="setProfile()" ion-button> Set Profile</button> -->
   </ion-slide>
+
+
+  <ion-slide style="background-color:aliceblue">
+    <h5>Section Four</h5>
+    <!-- <button (click)="getPicture()" ion-button>Take Picture</button>
+    <img *ngIf="image" [src]="image" alt=""> -->
+
+    <!-- <ion-item>
+        <p>{{imageURI}}</p>
+        <button ion-button color="secondary" (click)="getImage()">Get Image</button>
+      </ion-item>
+      <ion-item>
+        <h4>Image Preview</h4>
+        <img src="{{imageFileName}}" *ngIf="imageFileName" alt="Ionic File" width="300" />
+      </ion-item>
+      <ion-item>
+        <button ion-button (click)="uploadFile()">Upload</button>
+      </ion-item> -->
+
+      <button (click)="getPicture()" ion-button>Take Pic Upload </button>
+
+ </ion-slide>
+
+
+ <ion-slide style="background-color:aliceblue">
+    <h5>Send</h5>
+
+    <button (click)="setProfile()" ion-button>Submit</button>
+ </ion-slide>
+
+
 </ion-slides>
